@@ -1,9 +1,10 @@
 import React from "react";
+import Modal from './Modal';
 
 export default function Header() {
   var userAuthenticate = false;
   return (
-    <header className="p-3 bg-dark text-white">
+    <header className="p-3 bg-dark">
       <div className="/">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           {
@@ -44,22 +45,22 @@ export default function Header() {
                 aria-labelledby="dropdownUser1"
               >
                 <li>
-                  <a className="dropdown-item" href="/">
+                  <a className="dropdown-item" href="/Main">
                     Shirts
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/">
+                  <a className="dropdown-item" href="/Main">
                     T-shirts
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/">
+                  <a className="dropdown-item" href="/Main">
                     Jeans
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/">
+                  <a className="dropdown-item" href="/Main">
                     Formal Clothes
                   </a>
                 </li>
@@ -86,20 +87,20 @@ export default function Header() {
             />
           </form>
 
-          {!userAuthenticate && (
+          {userAuthenticate ? (
+            <div>
+              <p>hello</p>
+            </div>
+          ) :  (
+
             <div className="text-end">
-              <a href="/Login">
-                <button type="button" className="btn btn-outline-light me-2">
-                  Login
-                </button>
-              </a>
-              <a href="/SignUp">
-                <button type="button" className="btn btn-warning">
-                  Sign-up
-                </button>
-              </a>
+              <button type="button" className="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Sign Up
+            </button>
+            < Modal />
             </div>
           )}
+          
         </div>
       </div>
     </header>

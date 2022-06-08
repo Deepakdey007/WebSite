@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 // import image from './user.png';
 
 export default function Main() {
+
+  const [name, setname] = useState("Shirts");
   return (
     <>
     <div className="m-4">
       <div className="container">
+        <h1>{name}</h1>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div className="col">
             <div className="card shadow-sm">

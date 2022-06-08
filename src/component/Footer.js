@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div>
+    <div className="text-black">
       <footer className="d-flex flex-wrap justify-content-between align-items-center border-top bg-dark py-3 w3-container">
-        <p className="col-md-4 mb-0 text-muted text-white">© 2021 Company, Inc</p>
+        <p className="col-md-4 mb-0 text-muted  text-black">© 2022 All Rights Reserved.</p>
 
         <a
           href="/"
@@ -17,17 +17,22 @@ export default function Footer() {
 
         <ul className="nav col-md-4 justify-content-end">
           <li className="nav-item">
-            <a href="/" className="nav-link px-2 text-muted text-white">
+            <a href="/" className="nav-link px-2 text-muted">
               Home
             </a>
           </li>
           <li className="nav-item">
-            <a href="/" className="nav-link px-2 text-muted">
-              Features
+            <a href="/" className="nav-link px-2 text-muted text-pink">
+              Terms
             </a>
           </li>
           <li className="nav-item">
             <a href="/" className="nav-link px-2 text-muted">
+              Privacy Policy
+            </a>
+          </li>
+          <li className="nav-item text-black">
+            <a href="/" className="nav-link px-2 text-muted  text-black">
               Pricing
             </a>
           </li>
